@@ -4,11 +4,17 @@ const app = express()
 const PORT = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello World')
+  res.json(
+    {
+      "quote": "Why are you keeping the curiosity door locked?",
+      "source" : "Stranger things",
+      "author": "Dustin"
+    }
+  );
 })
 
 app.get('/about', (req, res) => {
-  res.send('About route 🎉 ')
+  res.send('PAW 🎉 ')
 })
 
 app.listen(PORT, () => {
